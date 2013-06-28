@@ -1,0 +1,6 @@
+name 'berzelius'
+maintainer 'Andrew Regner'
+maintainer_email 'andrew.regner@mailtrust.com'
+license 'MIT'
+description ''
+version '0.1.0'
