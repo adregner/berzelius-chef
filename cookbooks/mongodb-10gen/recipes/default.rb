@@ -72,14 +72,12 @@ directory "/data" do
   owner "root"
   mode 00755
 end
- 
-remote_directory "/data/mongodb" do
-  source "mongodb"
-  files_group "mongodb"
-  files_owner "mongodb"
-  files_mode 00644
-  owner "mongodb"
-  group "mongodb"
-  mode 00755
+
+%w{db etc log misc}.each do |dir|
+  directory "/data/mongodb/#{dir}" do
+    owner "mongodb"
+    group "mongodb"
+    mode 00755
+  end
 end
 
